@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  home: MyString
+  experience: MyString
+  education: MyString
+  projects: MyString
+  skills: MyString
+  approach: MyString
+  contact: MyString
+
+two:
+  home: MyString
+  experience: MyString
+  education: MyString
+  projects: MyString
+  skills: MyString
+  approach: MyString
+  contact: MyString
