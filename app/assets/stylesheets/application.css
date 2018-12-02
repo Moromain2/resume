@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700|Playfair+Display:700');
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* General */
+body {
+  font-family: 'Nunito Sans', 'Helvetica', sans-serif;
+  font-size: 16px;
+}
