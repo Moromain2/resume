@@ -1,0 +1,122 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,700|Playfair+Display:700');
+
+/* Variables */
+$accent: #46FF96;
+$dark: #1E1E1E;
+$light: #EEEEEE;
+$gradient: linear-gradient(-225deg, #5A5A5A 0%, #1E1E1E 100%);
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* General */
+html {
+  background-image: $gradient;
+}
+body {
+  font-family: 'Nunito Sans', 'Helvetica', sans-serif;
+  font-size: 16px;
+  height: 100vh;
+}
+
+.cta {
+  background-color: $accent;
+  text-transform: uppercase;
+  display: inline-block;
+  border-radius: 3px;
+  color: $dark;
+  box-shadow: 0 1px 2px 1px rgba(0,0,0,0.40);
+  transition: all ease-in-out 200ms;
+  &:hover {
+    background-color: $light;
+    box-shadow: 0 2px 3px 2px rgba(0,0,0,0.30);
+  }
+}
+.cta-big {
+  padding: 1em 2em;
+}
+.cta-small, .cta-flat {
+  padding: .75em 1.25em;
+  font-size: .75em;
+}
+.cta-flat {
+  box-shadow: none;
+}
+
+/* Navbar */
+.navbar-container, .navlinks-container, .navlinks-container nav ul, .social-links-container ul  {
+  display: flex;
+  align-items: center;
+}
+.navbar-container {
+  justify-content: space-between;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  padding: 1em 5%;
+  color: $light;
+}
+.navlinks-container nav ul {
+  margin-right: 2em;
+  li a {
+    margin-right: .5em;
+    display: inline-block;
+    &::after {
+      content: '';
+      height: 1px;
+      width: 0;
+      background-color: $accent;
+      display: block;
+      transition: all ease-in-out 150ms;
+    }
+    &:hover::after {
+      width: 100%;
+    }
+    &.active {
+      color: $accent;
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+  li:last-of-type a {
+    margin-right: 0;
+  }
+}
+.social-links-container ul li:first-of-type {
+  margin-right: 1em;
+}
+.social-links-container img {
+  transition: all ease-in-out 200ms;
+  &:hover{
+    opacity: .7;
+  }
+}
