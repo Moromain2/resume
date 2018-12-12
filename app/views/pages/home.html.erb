@@ -1,1 +1,162 @@
-<h1>Home</h1>
+<section id="hero", class="flex-container">
+  <div class="hero-wrapper flex-container">
+    <div class="hero-content flex-container">
+      <div class="hero-content-left">
+        <p class="hero-intro-text">
+          <strong>Welcome.</strong> <br>
+          I’m Romain, a freelance brand specialist and digital enthusiast. I like to create experiences that are meaningful for the users and gives a powerful image to the brand.
+        </p>
+        <p>Checkout my work:</p>
+        <ul>
+          <li><%= link_to 'Experience', pages_experience_path, class: "cta cta-big" %></li>
+          <li><%= link_to 'Education', pages_education_path, class: "cta cta-big" %></li>
+          <li><%= link_to 'Projects', pages_projects_path, class: "cta cta-big" %></li>
+          <li><%= link_to 'Skills', pages_skills_path, class: "cta cta-big" %></li>
+        </ul>
+      </div>
+      <div class="hero-content-right">
+        <div class="image-wrapper">
+          <%= image_tag('illustrations/hero-image.svg') %>
+        </div>
+      </div>
+    </div>
+    <div class="quick-browse-container">
+      <p>No time to browse everyting?</p>
+      <a href="#home-experience" class="cta cta-small">At a glance</a>
+    </div>
+  </div>
+</section>
+
+<section id="home-experience" class="flex-container">
+  <div class="home-experience-wrapper">
+    <div class="home-experience-container">
+      <h2 class="section-title">Latest Experience</h2>
+      <div class="cards-container flex-container">
+        <!-- Change with a ruby loop -->
+        <div class="experience-card">
+          <h3 class="experience-title">Project Manager</h3>
+          <h4 class="experience-company">Twid Design</h4>
+          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
+          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Project Manager</h3>
+          <h4 class="experience-company">Twid Design</h4>
+          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
+          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
+        </div>
+        <div class="experience-card">
+          <h3 class="experience-title">Project Manager</h3>
+          <h4 class="experience-company">Twid Design</h4>
+          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
+          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
+        </div>
+        <!-- End the loop -->
+      </div>
+    </div>
+    <div class="see-all-container">
+      <%= link_to 'See all experiences', pages_experience_path, class: 'cta cta-big' %>
+    </div>
+  </div>
+</section>
+
+<section id="home-education" class="flex-container flex-align-center">
+  <div class="home-education-wrapper">
+    <h2 class="section-title">Education</h2>
+    <div class="home-education-container flex-container flex-align-center">
+      <div class="left-content">
+        <div class="home-education-item">
+          <h2 class="second-header">Masters Degree in Communication</h2>
+          <h3 class="third-header">Iscom Paris - 2017</h3>
+        </div>
+        <div class="home-education-item">
+          <h2 class="second-header">Web development Bootcamp</h2>
+          <h3 class="third-header">The Hacking Project - 2017</h3>
+        </div>
+        <div class="home-education-item">
+          <h2 class="second-header">Social and Economics Bacalauréat</h2>
+          <h3 class="third-header">Lycée Buffon - 2012</h3>
+        </div>
+      </div>
+      <div class="right-content">
+        <div class="image-wrapper">
+          <%= image_tag('illustrations/education-image.svg') %>
+        </div>
+      </div>
+    </div>
+    <div class="see-all-container">
+      <%= link_to 'See details', pages_education_path, class: 'cta cta-big' %>
+    </div>
+  </div>
+</section>
+
+<section id="home-project" class="flex-containe flex-align-center">
+  <div class="home-project-wrapper">
+    <div class="home-project-container flex-container flex-align-center">
+    <div class="left-content">
+      <h2 class="section-title">Last Project</h2>
+      <div class="project-card">
+        <div class="image-container">
+
+        </div>
+        <h2 class="second-header">Project title</h2>
+        <h3 class="third-header">Tag name</h3>
+        <p>Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
+        <%= link_to 'Read More', pages_projects_path, class: 'cta cta-flat' %>
+      </div>
+    </div>
+    <div class="right-content">
+      <div class="image-wrapper">
+        <%= image_tag('illustrations/project-image.svg') %>
+      </div>
+    </div>
+    </div>
+    <div class="see-all-container">
+      <%= link_to 'See all projects', pages_projects_path, class: 'cta cta-big' %>
+    </div>
+  </div>
+</section>
+
+<section id="home-skills" class="flex-container">
+  <div class="home-skills-wrapper flex-container flex-align-center">
+    <div class="home-skills-container flex-container">
+      <div class="left-content">
+        <h2 class="section-title">Skills</h2>
+        <div class="cards-container">
+          <div class="skill-card">
+            <div class="skill-card-image">
+              <%= image_tag('icons/strategy-icon.svg') %>
+            </div>
+            <h3 class="skill-card-title">Strategy</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-image">
+              <%= image_tag('icons/branding-icon.svg') %>
+            </div>
+            <h3 class="skill-card-title">Branding</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-image">
+              <%= image_tag('icons/design-icon.svg') %>
+            </div>
+            <h3 class="skill-card-title">Design</h3>
+          </div>
+          <div class="skill-card">
+            <div class="skill-card-image">
+              <%= image_tag('icons/development-icon.svg') %>
+            </div>
+            <h3 class="skill-card-title">Development</h3>
+          </div>
+        </div>
+      </div>
+      <div class="right-content flex-container flex-align-center">
+        <div class="image-wrapper">
+          <%= image_tag('illustrations/skills-image.svg') %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

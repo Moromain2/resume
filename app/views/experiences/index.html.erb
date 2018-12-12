@@ -1,0 +1,18 @@
+<section id="experience-index-wrapper">
+
+<h1 class="section-title">Experiences</h1>
+<p class="intro-text">Discover my latest profesionnal experiences and the challenges I had to face.</p>
+
+<div class="experience-cards-container">
+  <% @experiences.each do |experience| %>
+  <div class="experience-card">
+    <h2><%= experience.title %></h2>
+    <h3><%= experience.company %></h3>
+    <h4><%= experience.details %></h4>
+    <p><%= experience.intro %></p>
+    <%= link_to 'Read More', experience_path(experience), :class => 'cta cta-flat' %>
+  </div>
+  <% end %>
+</div>
+
+</section>

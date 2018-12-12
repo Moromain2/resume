@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  
+  resources :experiences
+
+  get 'experiences/index'
+  get 'experiences/show'
+  get 'experiences/new'
+  get 'experiences/edit'
+  get 'experiences/create'
+  get 'experiences/update'
+  get 'experiences/destroy'
   root to: "pages#home"
 
   get "pages/experience" => "pages#experience"
