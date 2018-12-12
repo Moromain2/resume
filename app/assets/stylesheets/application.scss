@@ -489,6 +489,14 @@ div[class$="card"] {
 }
 
 @media screen and (max-width: 849px) {
+  .navbar-container {
+    .logo-container {
+      margin: auto;
+    }
+    .navlinks-container, .social-links-container {
+      display: none;
+    }
+  }
   section[id^="home-"] {
     .left-content {
       width: 100%;
