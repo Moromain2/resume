@@ -497,6 +497,15 @@ div[class$="card"] {
       display: none;
     }
   }
+  .hero-content-right {
+    width: 0;
+  }
+  .hero-content-left {
+    width: 100%;
+    .hero-intro-text {
+      width: 100%;
+    }
+  }
   section[id^="home-"] {
     .left-content {
       width: 100%;

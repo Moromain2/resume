@@ -1,5 +1,6 @@
 class PagesController < ApplicationController
   def home
+    @experiences = Experience.first(3)
   end
 
   def experience

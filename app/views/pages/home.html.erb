@@ -32,29 +32,17 @@
     <div class="home-experience-container">
       <h2 class="section-title">Latest Experience</h2>
       <div class="cards-container flex-container">
-        <!-- Change with a ruby loop -->
-        <div class="experience-card">
-          <h3 class="experience-title">Project Manager</h3>
-          <h4 class="experience-company">Twid Design</h4>
-          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
-          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
-        </div>
-        <div class="experience-card">
-          <h3 class="experience-title">Project Manager</h3>
-          <h4 class="experience-company">Twid Design</h4>
-          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
-          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
-        </div>
-        <div class="experience-card">
-          <h3 class="experience-title">Project Manager</h3>
-          <h4 class="experience-company">Twid Design</h4>
-          <h5 class="experience-details">Paris, France (2016 - 2018)</h5>
-          <p class="experience-intro">Donec ullamcorper nulla non metus auctor fringilla. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.</p>
-          <%= link_to 'Read More', pages_experience_path, class: "cta cta-flat" %>
-        </div>
-        <!-- End the loop -->
+
+        <% @experiences.each do |experience| %>
+          <div class="experience-card">
+            <h3 class="experience-title"><%= experience.title %></h3>
+            <h4 class="experience-company"><%= experience.company %></h4>
+            <h5 class="experience-details"><%= experience.details %></h5>
+            <p class="experience-intro"><%= experience.intro %></p>
+            <%= link_to 'Read More', experience_path(experience), class: "cta cta-flat" %>
+          </div>
+        <% end %>
+
       </div>
     </div>
     <div class="see-all-container">

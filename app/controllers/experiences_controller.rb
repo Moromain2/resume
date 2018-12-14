@@ -11,10 +11,6 @@ class ExperiencesController < ApplicationController
     @experience = Experience.new
   end
 
-  def edit
-    @experience = Experience.find(params[:id])
-  end
-
   def create
     @experience = Experience.new(experience_params)
     @experience.save
@@ -23,6 +19,10 @@ class ExperiencesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def edit
+    @experience = Experience.find(params[:id])
   end
 
   def update

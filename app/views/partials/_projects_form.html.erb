@@ -1,0 +1,30 @@
+<%= form_for @project do |f| %>
+<%= render "partials/error_messages", :target => @project %>
+<div class="form-container">
+
+  <%= f.label :cover, 'Cover image' %>
+  <%= f.text_field :cover, :required => true %>
+
+  <%= f.label :title, 'Title' %>
+  <%= f.text_field :title, :required => true, :maxlength => 120, :minlenght => 8 %>
+
+  <%= f.label :tag, 'Tag' %>
+  <%= f.text_field :tag, :required => true, :maxlength => 120, :minlenght => 8 %>
+
+  <%= f.label :intro, 'Intro (max 220 characters)' %>
+  <%= f.text_area :intro, :required => true,  :maxlength => 220, :minlenght => 90 %>
+
+  <%= f.label :body, 'Content' %>
+  <%= f.text_area :body, :required => true, :maxlength => 1600, :minlenght => 300 %>
+
+</div>
+
+<% if current_page?(action: 'new') %>
+  <%= f.submit 'Publish', :class => 'cta cta-small' %>
+<% end %>
+<% if current_page?(action: 'edit') %>
+  <%= f.submit 'update', :class => 'cta cta-small' %>
+<% end %>
+<%= link_to 'Cancel', projects_path, :class => 'cta cta-small cta-danger' %>
+
+<% end %>

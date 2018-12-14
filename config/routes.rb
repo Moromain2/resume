@@ -1,5 +1,13 @@
 Rails.application.routes.draw do
-  resources :experiences
+  resources :experiences, :projects
+
+  get 'projects/index'
+  get 'projects/show'
+  get 'projects/new'
+  get 'projects/create'
+  get 'projects/edit'
+  get 'projects/update'
+  get 'projects/destroy'
 
   get 'experiences/index'
   get 'experiences/show'
@@ -8,6 +16,7 @@ Rails.application.routes.draw do
   get 'experiences/create'
   get 'experiences/update'
   get 'experiences/destroy'
+
   root to: "pages#home"
 
   get "pages/experience" => "pages#experience"
