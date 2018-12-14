@@ -3,6 +3,8 @@
 <h1><%= @experience.title %></h1>
 <h2><%= @experience.company %></h2>
 <h3><%= @experience.details %></h3>
-<p><%= @experience.body %></p>
+<%= @experience.body.html_safe %>
+
+<%= link_to 'Delete', @experience, method: :delete, data: {confirm: 'Are you sure?'}, :class => 'cta cta-small cta-danger' %>
 
 </section>

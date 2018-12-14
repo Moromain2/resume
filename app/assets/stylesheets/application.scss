@@ -90,6 +90,13 @@ section[id$="-wrapper"] {
     color: $warning;
   }
 }
+section[id*='-show-'] {
+  color: $light;
+  img {
+    width: 100% !important;
+    height: auto !important;
+  }
+}
 
 // Headers
 h1, h2, h3, h4 {
@@ -121,6 +128,9 @@ h1, h2, h3, h4 {
 .cta-big {
   padding: 1em 2em;
 }
+.cta-small {
+  border: 1px solid $accent;
+}
 .cta-small, .cta-flat {
   padding: .75em 1.25em;
   font-size: .75em;
@@ -140,6 +150,7 @@ h1, h2, h3, h4 {
 .cta-danger {
   background-color: $warning;
   color: $light;
+  border: 1px solid $warning;
   &:hover {
     color: $dark;
   }
@@ -185,12 +196,18 @@ div[class$="card"] {
     margin-bottom: 1em;
     padding: .5em;
     font-size: .75em;
+    &:focus {
+      outline: none
+    }
     &:last-child {
       margin-bottom: 0;
     }
   }
+  .intro-field-container textarea {
+    height: 100px;
+  }
   textarea {
-    height: 150px;
+    height: 350px;
     resize: none;
   }
 }
@@ -247,6 +264,28 @@ div[class$="card"] {
   transition: all ease-in-out 200ms;
   &:hover {
     opacity: .7;
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  width: 100%;
+  background-color: $accent;
+  justify-content: space-between;
+  padding: 4em 5%;
+  .footer-social-links ul {
+    display: flex;
+    li {
+      margin-right: 1em;
+      opacity: .65;
+      transition: all ease-in-out 200ms;
+      &:last-of-type {
+        margin-right: 0;
+      }
+      &:hover {
+        opacity: 1;
+      }
+    }
   }
 }
 

@@ -37,6 +37,7 @@ class ProjectsController < ApplicationController
   def destroy
     @project = Project.find(params[:id])
     @project.destroy
+    redirect_to :action => :index, status: 303
   end
 
   private

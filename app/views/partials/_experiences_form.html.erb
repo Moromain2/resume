@@ -11,11 +11,13 @@
   <%= f.label :details, 'Details' %>
   <%= f.text_field :details, :required => true, :maxlength => 120, :minlenght => 8 %>
 
-  <%= f.label :intro, 'Intro (max 220 characters)' %>
-  <%= f.text_area :intro, :required => true,  :maxlength => 220, :minlenght => 90 %>
+  <div class="intro-field-container">
+    <%= f.label :intro, 'Intro (max 220 characters)' %>
+    <%= f.text_area :intro, :required => true,  :maxlength => 220, :minlenght => 90 %>
+  </div>
 
   <%= f.label :body, 'Content' %>
-  <%= f.text_area :body, :required => true, :maxlength => 1600, :minlenght => 300 %>
+  <%= f.cktext_area :body, :required => true, :maxlength => 1600, :minlenght => 300 %>
 
 </div>
 

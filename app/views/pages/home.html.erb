@@ -27,29 +27,31 @@
   </div>
 </section>
 
-<section id="home-experience" class="flex-container">
-  <div class="home-experience-wrapper">
-    <div class="home-experience-container">
-      <h2 class="section-title">Latest Experience</h2>
-      <div class="cards-container flex-container">
+<% if @experiences.any? %>
+  <section id="home-experience" class="flex-container">
+    <div class="home-experience-wrapper">
+      <div class="home-experience-container">
+        <h2 class="section-title">Latest Experience</h2>
+        <div class="cards-container flex-container">
 
-        <% @experiences.each do |experience| %>
-          <div class="experience-card">
-            <h3 class="experience-title"><%= experience.title %></h3>
-            <h4 class="experience-company"><%= experience.company %></h4>
-            <h5 class="experience-details"><%= experience.details %></h5>
-            <p class="experience-intro"><%= experience.intro %></p>
-            <%= link_to 'Read More', experience_path(experience), class: "cta cta-flat" %>
-          </div>
-        <% end %>
+          <% @experiences.each do |experience| %>
+            <div class="experience-card">
+              <h3 class="experience-title"><%= experience.title %></h3>
+              <h4 class="experience-company"><%= experience.company %></h4>
+              <h5 class="experience-details"><%= experience.details %></h5>
+              <p class="experience-intro"><%= experience.intro %></p>
+              <%= link_to 'Read More', experience_path(experience), class: "cta cta-flat" %>
+            </div>
+          <% end %>
 
+        </div>
+      </div>
+      <div class="see-all-container">
+        <%= link_to 'See all experiences', pages_experience_path, class: 'cta cta-big' %>
       </div>
     </div>
-    <div class="see-all-container">
-      <%= link_to 'See all experiences', pages_experience_path, class: 'cta cta-big' %>
-    </div>
-  </div>
-</section>
+  </section>
+<% end %>
 
 <section id="home-education" class="flex-container flex-align-center">
   <div class="home-education-wrapper">

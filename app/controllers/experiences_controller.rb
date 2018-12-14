@@ -37,6 +37,7 @@ class ExperiencesController < ApplicationController
   def destroy
     @experience = Experience.find(params[:id])
     @experience.destroy
+    redirect_to :action => :index, status: 303
   end
 
   private
