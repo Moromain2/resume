@@ -1,4 +1,5 @@
 class ProjectsController < ApplicationController
+  http_basic_authenticate_with :name => 'admin', :password => 'root', :except => [:index, :show]
   def index
     @projects = Project.all
   end

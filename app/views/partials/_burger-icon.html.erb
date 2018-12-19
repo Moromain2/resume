@@ -1,0 +1,15 @@
+<div class="mobile-menu hidden">
+  <div class="burger-icon-container">
+    <%= image_tag('icons/add-sign.svg') %>
+  </div>
+  <nav>
+    <ul>
+      <li><%= link_to 'Experience', experiences_path, :class => current_class?('/experiences') %></li>
+      <li><%= link_to 'Education', pages_education_path, :class => current_class?('/pages/education') %></li>
+      <li><%= link_to 'Projects', projects_path, :class => current_class?('/projects') %></li>
+      <li><%= link_to 'Skills', pages_skills_path, :class => current_class?('/pages/skills') %></li>
+      <li><%= link_to 'Approach', pages_approach_path, :class => current_class?('/pages/approach') %></li>
+      <li><%= link_to 'Contact', pages_contact_path, :class => current_class?('/pages/contact') %></li>
+    </ul>
+  </nav>
+</div>
